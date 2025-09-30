@@ -1,4 +1,4 @@
-/* Image de fond avec overlay vert */
+/* Image de fond avec overlay */
 body {
   background: url("img/WhatsApp\ Image\ 2025-07-29\ at\ 02.47.15.jpeg") no-repeat center center/cover;
   position: relative;
@@ -8,16 +8,60 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 100, 0, 0.6); /* overlay vert foncé */
+  background: rgba(0, 100, 0, 0.6);
   z-index: 0;
 }
 
-/* Mettre le contenu par-dessus l'overlay */
+/* Contenu par-dessus overlay */
 body > * {
   position: relative;
   z-index: 1;
 }
-p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 13px;
+
+/* Logo */
+.logo {
+  height: 80px;
+  max-width: 200px;
+}
+
+/* Boutons glass */
+.btn-glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Footer glass */
+.footer-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.footer-glass a:hover {
+  text-decoration: underline;
+}
+
+/* Animations simples */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.animate__fadeInDown { animation: fadeInDown 1s ease forwards; }
+.animate__pulse { animation: pulse 1.5s infinite; }
+
+/* Responsive texte */
+h1, h2 {
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }

@@ -1,4 +1,4 @@
-// Date cible (exemple : 31 Décembre 2025 à 00h00)
+// Date cible du prochain programme
 const eventDate = new Date("nov 28, 2025 00:00:00").getTime();
 
 const countdownEl = document.getElementById("countdown");
