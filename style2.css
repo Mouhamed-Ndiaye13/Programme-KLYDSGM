@@ -1,0 +1,30 @@
+/* Image de fond avec overlay vert */
+body {
+  background: url("img/WhatsApp\ Image\ 2025-09-18\ at\ 15.18.04.jpeg") no-repeat center center/cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 100, 0, 0.6); /* overlay vert foncé */
+  z-index: 0;
+}
+
+/* Mettre le contenu par-dessus l'overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* fond semi-transparent */
+  backdrop-filter: blur(5px); /* effet flou derrière */
+  -webkit-backdrop-filter: blur(5px); /* pour Safari */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
