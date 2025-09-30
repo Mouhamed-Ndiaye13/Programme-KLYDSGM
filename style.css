@@ -1,0 +1,19 @@
+/* Image de fond avec overlay vert */
+body {
+  background: url("img/WhatsApp\ Image\ 2025-07-29\ at\ 02.47.15.jpeg") no-repeat center center/cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 100, 0, 0.6); /* overlay vert foncé */
+  z-index: 0;
+}
+
+/* Mettre le contenu par-dessus l'overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
