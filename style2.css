@@ -60,3 +60,8 @@ body > * {
 .footer-glass a:hover {
   text-decoration: underline;
 }
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
