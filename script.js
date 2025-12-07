@@ -1,5 +1,5 @@
 // Date cible du prochain programme
-const eventDate = new Date("nov 28, 2025 17:00:00").getTime();
+const eventDate = new Date("jan 02, 2026 17:00:00").getTime();
 
 const countdownEl = document.getElementById("countdown");
 
